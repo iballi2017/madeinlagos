@@ -124,6 +124,9 @@ body {
         color: #202020;
         font-size: .9rem;
     }
+    .sidenav .category_list a:hover {
+        color: #BCAE00;
+    }
     .hero .hero_flex_wrapper .sidenav .side_nav_tabs {
         padding-right: .4em;
         padding-left: .4em;
@@ -152,10 +155,11 @@ body {
         right: 0;
         top: 0;
         bottom: 0;
-        left: 18%;
+        left: -100%;
+        opacity: 0.5;
+        transition: opacity 500ms ease-in-out;
         background-color: #ffffff;
         border: 1px solid #ccc;
-        display: none;
     }
     .sidenav_subList li {
         list-style-type: disc;
@@ -166,7 +170,8 @@ body {
         color: #202020;
     }
     .category_list:hover>.sidenav_subList {
-        display: block;
+        left: 18%;
+        opacity: 1;
     }
     .category_list:hover {
         z-index: 2;
