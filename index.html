@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon | </title>
+    <!-- favicon -->
+    <link rel="icon" href="./images/favicon.png" type="image/gif" sizes="16x16">
+    <!-- Bootstrap 4.3.x -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Fontawesome 5.13.x -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- Owl carousel stylesheet -->
+    <link rel="stylesheet" href="./plugins/owl_carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./plugins/owl_carousel/owl.theme.default.min.css">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="./style/attachment_slider_style.css">
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+
+
+    <header>
+        <!-- header -->
+        <!-- a. large screen header -->
+        <nav class="main_nav_lg sticky-top d-none d-md-block py-2">
+            <div class="cont_wrapper main_nav_inner">
+                <div class="fl_itm_1">
+                    <!-- <a class="navbar-brand" href="#">AmazonLagos</a> -->
+                    <a href="./index.html" class="navbar-brand">
+                        <img src="./images/madeinlagos_brand_logo.png" alt="made in Lagos brand logo"></a>
+                    <nav class="nav">
+                        <li class="nav-item dropdown top_nav_dropdown">
+                            <a class="nav-link custom_dropdown_toggle pseudo_after" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                Help
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
+                                <ul class="category_list_lg_scrn">
+                                    <li>
+                                        <a href="./views/faq.php">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="./views/contact-us.php">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </nav>
+                </div>
+                <div class="fl_itm_2">
+                    <form class="search_form_lg-scrn" action="#" style="display: flex;">
+                        <input class="mr-2 rounded-left py-2 px-1" type="text" placeholder="SEARCH" name="searchItem" style="width: 85%">
+                        <button class="px-3 rounded-right text_upper y_btn">Search</button>
+                    </form>
+                </div>
+                <div class="fl_itm_3">
+                    <!-- <form class="search_form_lg-scrn" action="#" style="display: flex">
+                        <input class="mr-2 rounded-left py-0" type="text" placeholder="SEARCH" name="searchItem">
+                        <button class="px-3 rounded-right text_upper y_btn">Search</button>
+                    </form> -->
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item dropdown top_nav_dropdown">
+                            <a class="nav-link custom_dropdown_toggle pseudo_after" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Login
+                            </a>
+                            <div class="dropdown-menu px-3 border-0" aria-labelledby="navbarDropdown">
+                                <ul class="category_list_lg_scrn">
+                                    <li class="text-center rounded p-0">
+                                        <a href="./views/login.php">Login</a>
+                                    </li>
+                                    <div class="dropdown-divider"></div>
+                                    <li class="text-center rounded p-0">
+                                        <a href="./views/register.php">Sign Up</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link txt_green" href="#">
+                                <i class="fas fa-shopping-bag shopping_cart_icon">
+                                    <span class="badge badge-primary" id="cart_count">0</span>
+                                </i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ##### -->
+        <!--  -->
+        <!-- b. small screen header -->
+        <nav class="cust_nav navbar-expand-lg navbar-light p-0 sticky-top d-block d-md-none">
+            <div class="bg_deep_green">
+                <div class="cont_wrapper flex_just_spb right_0 left_0 align_center">
+                    <span>
+                        <!-- Brand-logo -->
+                        <button class="navbar-toggler text-white border-0" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="fas fa-bars"></div>
+                    </button>
+                    <a class="navbar-brand" href="./index.html"><img src="./images/madeinlagos_brand_logo.png" alt="made in Lagos brand logo"></a>
+                    </a>
+                    </span>
+                    <span>
+                        <!-- <i class="fas fa-shopping-cart"> -->
+                        <i class="fas fa-shopping-bag shopping_cart_icon">
+                            <span class="badge" id="cart_count">0</span>
+                    </i>
+                    </span>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-0">
+                    <li class="nav-item bg-white py-4 my-2 inline_flex">
+                        <div class="text-center margin-auto-0">
+                            <a class="access_btn py-2 px-5 white_btn mr-2" href="./views/login.php">Login</a>
+                            <a class="access_btn py-2 px-5 white_btn" href="./views/register.php">Sign Up</a></div>
+                    </li>
+                </ul>
+                <h6 class="container bg-white py-3 text_capital">All Categories</h6>
+                <div class="bg-white">
+                    <div class="container">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card border-0">
+                                <button class="btn btn-link cust_nav_link_dropdown px-0" type="button" data-toggle="collapse" data-target="#entertainment" aria-expanded="true" aria-controls="entertainment" id="entertainmentHeading">
+                                    <span>Entertainment</span>
+                                    <span>
+                                        <i class="fas fa-angle-right"></i>
+                                    </span>
+                                </button>
+
+                                <div id="entertainment" class="collapse" aria-labelledby="entertainmentHeading" data-parent="#accordionExample">
+                                    <div class="card-body py-0">
+                                        <ul class="navbar-nav category_list_wrapper mr-auto">
+                                            <li class="nav-item active">
+                                                <a class="nav-link text_capital" href="#">Television</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">Home Theatre</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">Sound Bar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- break -->
+                            <div class="card border-0">
+                                <button class="btn btn-link cust_nav_link_dropdown px-0" type="button" data-toggle="collapse" data-target="#householdAppliances" aria-expanded="true" aria-controls="householdAppliances" id="householdAppliancesHeading">
+                                    <span>Household/Appliances</span>
+                                    <span>
+                                        <i class="fas fa-angle-right"></i>
+                                    </span>
+                                </button>
+
+                                <div id="householdAppliances" class="collapse" aria-labelledby="householdAppliancesHeading" data-parent="#accordionExample">
+                                    <div class="card-body py-0">
+                                        <ul class="navbar-nav category_list_wrapper mr-auto">
+                                            <li class="nav-item active">
+                                                <a class="nav-link text_capital" href="#">Washing machine</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">Refrigerators </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">Freezers</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">Water dispensers</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- break -->
+                            <div class="card border-0">
+                                <button class="btn btn-link cust_nav_link_dropdown px-0" type="button" data-toggle="collapse" data-target="#cooling" aria-expanded="true" aria-controls="cooling" id="coolingHeading">
+                                    <span>Cooling</span>
+                                    <span>
+                                        <i class="fas fa-angle-right"></i>
+                                    </span>
+                                </button>
+
+                                <div id="cooling" class="collapse" aria-labelledby="coolingHeading" data-parent="#accordionExample">
+                                    <div class="card-body py-0">
+                                        <ul class="navbar-nav category_list_wrapper mr-auto">
+                                            <li class="nav-item active">
+                                                <a class="nav-link text_capital" href="#">Air conditioners - split unit,
+                                                    floor
+                                                    standing AC</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">Industrial fan</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">Cassette air conditioner</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">Air coolers</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- break -->
+                            <div class="card border-0">
+                                <button class="btn btn-link cust_nav_link_dropdown px-0" type="button" data-toggle="collapse" data-target="#kitchenAppliances" aria-expanded="true" aria-controls="kitchenAppliances" id="kitchenAppliancesHeading">
+                                    <span>Kitchen appliances</span>
+                                    <span>
+                                        <i class="fas fa-angle-right"></i>
+                                    </span>
+                                </button>
+                                <div id="kitchenAppliances" class="collapse" aria-labelledby="kitchenAppliancesHeading" data-parent="#accordionExample">
+                                    <div class="card-body py-0">
+                                        <div class="container-fluid">
+                                            <ul class="sm-navbar-nav category_list_wrapper mr-auto row p-0">
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#"> Electric jugs
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Electric oven</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Gas stoves</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#"> Hot plates </a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Microwaves</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Pressure
+                                                        cookers</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Rice cookers</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Sandwich
+                                                        makers</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#"> Blender </a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Mixers</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Juice
+                                                        extractor</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#"> Pressing iron
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Electric
+                                                        kettle</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Deep fryer</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Coffee maker</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Toasters</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#"> Gas cooker </a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Built in oven</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Built in Hob</a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#"> Built in chimney
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item p-0 col-6">
+                                                    <a class="nav-link text_capital" href="#">Table top
+                                                        cooker</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- break -->
+                            <div class="card border-0">
+                                <button class="btn btn-link cust_nav_link_dropdown px-0" type="button" data-toggle="collapse" data-target="#power" aria-expanded="true" aria-controls="power" id="powerHeading">
+                                    <span>Power</span>
+                                    <span>
+                                        <i class="fas fa-angle-right"></i>
+                                    </span>
+                                </button>
+
+                                <div id="power" class="collapse" aria-labelledby="powerHeading" data-parent="#accordionExample">
+                                    <div class="card-body py-0">
+                                        <ul class="navbar-nav category_list_wrapper mr-auto">
+                                            <li class="nav-item active">
+                                                <a class="nav-link text_capital" href="#">Stabilizers</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">Generator set</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- break -->
+                            <div class="card border-0">
+                                <button class="btn btn-link cust_nav_link_dropdown px-0" type="button" data-toggle="collapse" data-target="#groceries" aria-expanded="true" aria-controls="groceries" id="groceriesHeading">
+                                    <span>Groceries</span>
+                                    <span>
+                                        <i class="fas fa-angle-right"></i>
+                                    </span>
+                                </button>
+
+                                <div id="groceries" class="collapse" aria-labelledby="groceriesHeading" data-parent="#accordionExample">
+                                    <div class="card-body py-0">
+                                        <ul class="navbar-nav category_list_wrapper mr-auto">
+                                            <li class="nav-item active">
+                                                <a class="nav-link text_capital" href="#">A</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">B</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="#">C</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion mt-3" id="accordionExample2">
+                            <div class="card border-0">
+                                <button class="btn btn-link cust_nav_link_dropdown px-0" type="button" data-toggle="collapse" data-target="#faq" aria-expanded="true" aria-controls="faq" id="faqHeading">
+                                    <span>Help</span>
+                                    <span>
+                                        <i class="fas fa-angle-right"></i>
+                                    </span>
+                                </button>
+
+                                <div id="faq" class="collapse" aria-labelledby="faqHeading" data-parent="#accordionExample2">
+                                    <div class="card-body py-0">
+                                        <ul class="navbar-nav category_list_wrapper mr-auto">
+                                            <li class="nav-item active">
+                                                <a class="nav-link text_capital" href="./views/contact-us.php">Contact
+                                                    Us</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text_capital" href="./views/faq.php">FAQ</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="py-2 search_input_wrapper d-block d-md-none">
+            <div class="cont_wrapper">
+                <div class="input-group border search_input_grp">
+                    <input type="text" class="form-control border-0" placeholder="SEARCH" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary border-0 bg-white" type="button" id="button-addon2">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /header -->
+    </header>
+    <main>
+
+        <section class="hero_section mt-2">
+            <div class="cont_wrapper">
+                <div class="hero">
+                    <div class="inner">
+                        <div class="hero_flex_wrapper">
+                            <nav class="sidenav">
+                                <div class="sidenav_title p-3 border">All Categories</div>
+                                <ul class="side_nav_tabs list_style_none">
+                                    <li class="category_list"><a href="#">Electronics</a>
+                                        <div class="sidenav_subList">
+                                            <div class="container">
+                                                <ul class="row">
+                                                    <li class="col-3"><a href="#">Electric jugs </a></li>
+                                                    <li class="col-3"><a href="#"> Electric oven </a></li>
+                                                    <li class="col-3"><a href="#"> Gas stoves</a></li>
+                                                    <li class="col-3"><a href="#">
+                                                            Hot plates</a></li>
+                                                    <li class="col-3"><a href="#">
+                                                            Microwaves </a></li>
+                                                    <li class="col-3"><a href="#"> Pressure cookers</a></li>
+                                                    <li class="col-3"><a href="#">
+                                                            Rice cookers </a></li>
+                                                    <li class="col-3"><a href="#"> Sandwich makers </a></li>
+                                                    <li class="col-3"><a href="#"> Blender </a></li>
+                                                    <li class="col-3"><a href="#"> Mixers </a></li>
+                                                    <li class="col-3"><a href="#"> Juice extractor </a></li>
+                                                    <li class="col-3"><a href="#"> Pressing iron </a></li>
+                                                    <li class="col-3"><a href="#"> Electric kettle </a></li>
+                                                    <li class="col-3"><a href="#"> Deep fryer </a></li>
+                                                    <li class="col-3"><a href="#"> Coffee maker </a></li>
+                                                    <li class="col-3"><a href="#"> Toasters </a></li>
+                                                    <li class="col-3"><a href="#"> Gas cooker </a></li>
+                                                    <li class="col-3"><a href="#"> Built in oven </a></li>
+                                                    <li class="col-3"><a href="#"> Built in Hob </a></li>
+                                                    <li class="col-3"><a href="#"> Built in chimney </a></li>
+                                                    <li class="col-3"><a href="#"> Table top cooker </a></li>
+                                                    <li class="col-3"><a href="#"> Freezers </a></li>
+                                                    <li class="col-3"><a href="#"> Water dispensers </a></li>
+                                                    <li class="col-3"><a href="#"> Refrigerators</a></li>
+                                                    <li class="col-3"><a href="#"> Air conditioners - split unit, floor
+                                                            standing
+                                                            AC</a></li>
+                                                    <li class="col-3"><a href="#"> Industrial fan</a></li>
+                                                    <li class="col-3"><a href="#"> Cassette air conditioner</a></li>
+                                                    <li class="col-3"><a href="#"> Air coolers</a></li>
+                                                    <li class="col-3"><a href="#"> Washing machine -</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="category_list"><a href="#">Groceries</a>
+                                        <div class="sidenav_subList">
+                                            <div class="container">
+                                                <ul class="row">
+                                                    <li class="col-12">
+                                                        <a href="#">Canned Foods</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Food</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Cereal & beverages</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Fruits & Vegetables</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Fruit Juices and Drinks</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="category_list"><a href="#">Home, Kitchen and Office</a>
+                                        <div class="sidenav_subList">
+                                            <div class="container">
+                                                <ul class="row">
+                                                    <li class="col-12">
+                                                        <a href="#">Home, Kitchen and Office Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Home, Kitchen and Office Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Home, Kitchen and Office Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Home, Kitchen and Office Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Home, Kitchen and Office Link...</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="category_list"><a href="#">Books</a>
+                                        <div class="sidenav_subList">
+                                            <div class="container">
+                                                <ul class="row">
+                                                    <li class="col-12">
+                                                        <a href="#">Books Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Books Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Books Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Books Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Books Link...</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="category_list"><a href="#">Beauty</a>
+                                        <div class="sidenav_subList">
+                                            <div class="container">
+                                                <ul class="row">
+                                                    <li class="col-12">
+                                                        <a href="#">Beauty Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Beauty Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Beauty Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Beauty Link...</a>
+                                                    </li>
+                                                    <li class="col-12">
+                                                        <a href="#">
+                                                            Beauty Link...</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- Set up your HTML -->
+                            <div class="hero_slider_container" style="position: relative">
+                                <div class="owl-carousel hero_owl_slider owl-theme">
+                                    <div class="slider_item1 item d-flex">
+                                        <!-- Your Content A  -->
+                                        <img src="./images/jeremy-alford-Gd7NHWob31E-unsplash.jpg" alt="" style="width: 100%">
+                                    </div>
+                                    <div class="slider_item2 item d-flex">
+                                        <!-- Your Content B --><img src="./images/charisse-kenion-dah-jZWgzx8-unsplash.jpg" alt="" style="width: 100%">
+                                    </div>
+                                    <div class="slider_item3 item d-flex">
+                                        <!-- Your Content C --><img src="./images/charisse-kenion-dah-jZWgzx8-unsplash.jpg" alt="" style="width: 100%">
+                                    </div>
+                                    <div class="slider_item3 item d-flex">
+                                        Your Content D (Just background image)
+                                    </div>
+                                </div>
+                                <div class="hero_slide_nav">
+                                    <button class="hero_slide_prev fontawesome_pseudo"></button>
+                                    <button class="hero_slide_next fontawesome_pseudo"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest products section -->
+        <section>
+            <div class="cont_wrapper bg-white section_inner my-3 rounded">
+                <div class="border-bottom px-md-4">
+                    <h5 class="pt-2 mx-2 text_capital">Latest Products</h5>
+                </div>
+                <!-- <hr> -->
+                <div class="py-md-2 px-md-4">
+                    <div class="relative_position">
+                        <div class="owl-carousel owl-theme product_slider_one">
+                            <div class="card product_card shadow border-0 my-3">
+                                <a href="#">
+                                    <img src="./images/Nexus_NEXUS_ELECTRIC_OVEN_STAINLESS_STEEL_NX-936SS.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card product_card shadow border-0 my-3">
+                                <a href="#">
+                                    <img src="./images/Nexus_1000VA_Digital_Stabilizer_With_AVR_Function.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card product_card shadow border-0 my-3">
+                                <a href="#">
+                                    <img src="./images/Nexus_NEXUS_ELECTRIC_OVEN_STAINLESS_STEEL_NX-936SS.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card product_card shadow border-0 my-3">
+                                <a href="#">
+                                    <img src="./images/Nexus_1000VA_Digital_Stabilizer_With_AVR_Function.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card product_card shadow border-0 my-3">
+                                <a href="#">
+                                    <img src="./images/Nexus_NEXUS_ELECTRIC_OVEN_STAINLESS_STEEL_NX-936SS.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card product_card shadow border-0 my-3">
+                                <a href="#">
+                                    <img src="./images/Nexus_1000VA_Digital_Stabilizer_With_AVR_Function.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="custom_prod_nav_wrapper">
+                            <span class="latest_product_nav_prev"></span>
+                            <span class="latest_product_nav_next"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Selling sectio -->
+        <section>
+            <div class="cont_wrapper my-3 bg-white pb-3">
+                <div class="bg-dark rounded-top text-white py-3 mb-2">
+                    <div class="cont_wrapper">
+                        <h5 class="m-0 m-0 text_capital">Best Selling Products</h5>
+                    </div>
+                </div>
+                <div class="cont_wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-6 col-md-3 col-sm-6">
+                            <div class="card product_card shadow border-0 m-1">
+                                <a href="#">
+                                    <img src="./images/Nexus_NEXUS_ELECTRIC_OVEN_STAINLESS_STEEL_NX-936SS.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-sm-6">
+                            <div class="card product_card shadow border-0 m-1">
+                                <a href="#">
+                                    <img src="./images/Nexus_1000VA_Digital_Stabilizer_With_AVR_Function.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-sm-6">
+                            <div class="card product_card shadow border-0 m-1">
+                                <a href="#">
+                                    <img src="./images/Nexus_NEXUS_ELECTRIC_OVEN_STAINLESS_STEEL_NX-936SS.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 col-sm-6">
+                            <div class="card product_card shadow border-0 m-1">
+                                <a href="#">
+                                    <img src="./images/Nexus_1000VA_Digital_Stabilizer_With_AVR_Function.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h6 class="card-title text_capital">Nexus 7KG Washing Machine Semi-Auto Twin-Tub ...
+                                        </h6>
+                                        <p class="card-text prod_price">₦ 71,000</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Brand -->
+        <section>
+            <div class="cont_wrapper section_inner bg-white my-3">
+                <div class="border-bottom px-md-4">
+                    <h5 class="pt-2 mx-2 text_capital">Top Brands</h5>
+                </div>
+                <div>
+                    <div class="owl-carousel brand_slider_one cont_wrapper">
+
+                        <div>
+                            <img src="./images/nexus_brand_logo.png" alt="product brand thumbnail"></div>
+                        <div>
+                            <img src="./images/scanfrost_brand_logo.png" alt="product brand thumbnail"></div>
+
+                        <div>
+                            <img src="./images/nexus_brand_logo.png" alt="product brand thumbnail"></div>
+                        <div>
+                            <img src="./images/scanfrost_brand_logo.png" alt="product brand thumbnail"></div>
+
+                        <div>
+                            <img src="./images/nexus_brand_logo.png" alt="product brand thumbnail"></div>
+                        <div>
+                            <img src="./images/scanfrost_brand_logo.png" alt="product brand thumbnail"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Amazon Lagos -->
+        <section>
+            <div class="cont_wrapper bg-white py-3 my-2">
+                <div class="cont_wrapper">
+                    <h6 class="m-0 text_capital">About lagos Nigeria’s Largest Online Mall – Amazon lagos</h6>
+                    <br>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, aspernatur, sed delectus iusto autem expedita error ullam qui quae eos adipisci temporibus nulla! Molestiae beatae architecto culpa ipsum sapiente temporibus laboriosam cumque facere
+                        alias similique. Animi maxime eligendi voluptatum ducimus odio, nihil iste, eius magnam dolorem iure dicta, officiis pariatur?
+                        <br>
+                        <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero et ex esse eligendi sequi vel in fugiat ipsa doloribus error?
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- Footer section -->
+    <footer class="py-3 mt-4">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-4">
+                    <h6 class="text_upper footer_col_title">Company</h6>
+                    <ul class="p-0">
+                        <li>
+                            <a href="./views/privacy-policy.php">Privacy policy</a>
+                        </li>
+                        <li>
+                            <a href="./views/faq.php">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="./views/about-us.php">About us</a>
+                        </li>
+                        <li>
+                            <a href="./views/terms-and-conditions.php">Terms and conditions</a>
+                        </li>
+                        <li>
+                            <a href="./views/return-and-refund-policy.php">Return and refund policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h6 class="text_upper footer_col_title">Payment Metthod</h6>
+                    <ul class="p-0">
+                        <li>
+                            <a href="#">Transfer</a>
+                        </li>
+                        <li>
+                            <a href="#">Mastercard</a>
+                        </li>
+                        <li>
+                            <a href="#">Visa</a>
+                        </li>
+                        <li>
+                            <a href="#">Interswitch</a>
+                        </li>
+                        <li>
+                            <a href="#">Verve</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h6>SUBSCRIBE TO OUR NEWS LETTER</h6>
+                    <form action="#" class="newsletter_form">
+                        <input class="rounded-left py-2 border-0 px-2" type="text" name="email">
+                        <button type="submit" class="light_grn_btn rounded-right py-2">Subscribe</button>
+                    </form>
+                    <br>
+                    <br>
+                    <h6 class="text_upper footer_col_title">CONNECT WITH US</h6>
+                    <ul class="p-0 social_icons_wrapper">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram-square"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright mt-3 text_capital">
+            2020 &copy; Amazon Lagos
+        </div>
+
+    </footer>
+
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Owl carousel js -->
+    <script src="./plugins/owl_carousel/owl.carousel.min.js"></script>
+    <!-- Custom js -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
